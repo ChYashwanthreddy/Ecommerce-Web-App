@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      🛍️ QuickBuy Store
+    </div>
+
+    <div class="cart">
+      🛒 Cart: <span id="cartCount">0</span>
+      <button onclick="clearCart()">Clear</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to QuickBuy</h1>
+    <p>Best deals on gadgets, accessories, and daily essentials.</p>
+    <div class="offer" id="offerText">🎉 Today Offer: Loading...</div>
+  </section>
+
+  <main class="container">
+    <h2 class="title">Featured Products</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🎧 Wireless Headphones</h3>
+        <p>Noise cancellation • 20 hrs battery</p>
+        <div class="price">₹2,499</div>
+        <button onclick="addToCart('Headphones')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>⌚ Smart Watch</h3>
+        <p>Fitness tracking • Notifications</p>
+        <div class="price">₹3,999</div>
+        <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>📱 Smartphone</h3>
+        <p>64MP Camera • 5000mAh battery</p>
+        <div class="price">₹22,999</div>
+        <button onclick="addToCart('Smartphone')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>💻 Laptop</h3>
+        <p>SSD • 16GB RAM • Coding friendly</p>
+        <div class="price">₹59,999</div>
+        <button onclick="addToCart('Laptop')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>🖱️ Wireless Mouse</h3>
+        <p>Fast click • Smooth scroll</p>
+        <div class="price">₹699</div>
+        <button onclick="addToCart('Mouse')">Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <h3>🔌 Power Bank</h3>
+        <p>10000mAh • Fast charging</p>
+        <div class="price">₹1,199</div>
+        <button onclick="addToCart('Power Bank')">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="log-box">
+      <h3>📌 Cart Activity</h3>
+      <p id="logText">No items added yet.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 QuickBuy Store | E-Commerce Static Web App</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
