@@ -1,0 +1,19 @@
+namespace: ecommerce-ns
+
+replicas: 3
+
+deployment:
+  labels:
+    app: ecommerce
+  name: ecommerce-container
+  port: 80
+  image:
+    repository: yashwanth1712/ecommerce-web-app
+    tag: "1.0"
+
+service:
+  type: LoadBalancer
+  app: ecommerce
+  port: 80
+  targetPort: 80
+  protocol: TCP

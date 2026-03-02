@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-deployment
+  namespace: ecommerce-ns
+  labels:
+    app: ecommerce
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ecommerce
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+    spec:
+      containers:
+        - name: ecommerce-container
+          image: yashwanth1712/ecommerce-web-app:1.0
+          ports:
+            - containerPort: 80
